@@ -63,7 +63,7 @@ try:
 #ADDING FRUITS
 
 
-def back_from_function as string;  
+back_from_function=''
   def get_fruit_add_list(new_fruit):
 
    with my_cnx.cursor() as my_cur1:
