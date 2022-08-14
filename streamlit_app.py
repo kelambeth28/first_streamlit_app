@@ -63,12 +63,11 @@ try:
 #ADDING FRUITS
 
 
-back_from_function=''
   def get_fruit_add_list(new_fruit):
 
    with my_cnx.cursor() as my_cur1:
       my_cur1.execute("insert into pc_rivery_db.public.fruit_load_list values ('"+new_fruit+"')")
-      return "Thanks for adding "+ new_fruit
+      return "Thanks for adding "
     
   #Add a button to show the list
   fruit_add = streamlit.text_input('What fruit would you like to add?')
