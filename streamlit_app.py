@@ -6,7 +6,6 @@ from urllib.error import URLError
 
 streamlit.title ('🥣 My Parents now healthy diner');
 streamlit.header('🥗 Breakfast Menu')
-
 streamlit.text('🐔 Omega 3 & Blueberry Oatmeal')
 streamlit.text('🥑 Kale, Spinach & Rocket Smoothie')
 streamlit.text('🍞 Hard-Boiled Free-Range Egg')
@@ -42,31 +41,28 @@ try:
       #fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
       # write your own comment - what does this do?
       streamlit.dataframe(back_from_function)
+
 except URLError as e:
-  streamlit.error()
- 
+  streamlit.error()  
+
+try
 #DISPLAY ALL FRUITS
 
-#my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-# my_cur= my_cnx.cursor()
-# my_cur.execute("SELECT * from fruit_load_list")
-# my_data_rows = my_cur.fetchall()
-
-streamlit.text("The Fruit load list contains:")
+  streamlit.text("The Fruit load list contains:")
 #sno related functions
-def get_fruit_load_list():
+  def get_fruit_load_list():
    with my_cnx.cursor() as my_cur:
       my_cur.execute("SELECT * from fruit_load_list")
       return my_cur.fetchall()
 #Add a button to show the list
-if streamlit.button('Get Fruit Load List'):
-  my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-  my_data_rows=get_fruit_load_list()
-  streamlit.dataframe(my_data_rows)
+  if streamlit.button('Get Fruit Load List'):
+    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+    my_data_rows=get_fruit_load_list()
+    streamlit.dataframe(my_data_rows)
   
 #ADDING FRUITS
 
-try:
+
   
   def get_fruit_add_list(new_fruit):
    with my_cnx.cursor() as my_cur:
