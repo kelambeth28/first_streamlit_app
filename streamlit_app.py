@@ -48,7 +48,7 @@ except URLError as e:
 try:
 #DISPLAY ALL FRUITS
 
-  streamlit.Header("View Out Fruit List -Add your Favorites!")
+  streamlit.header("View Out Fruit List -Add your Favorites!")
 #sno related functions
   def get_fruit_load_list():
    with my_cnx.cursor() as my_cur:
