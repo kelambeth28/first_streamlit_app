@@ -68,9 +68,9 @@ if streamlit.button('Get Fruit Load List'):
 
 
 #ADDING FRUITS
-fruit_add =''
+  fruit_add =''
 
-fruit_add = streamlit.text_input('What fruit would you like to add?')
+  fruit_add = streamlit.text_input('What fruit would you like to add?')
 
-my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values ('"+fruit_add+"')")
-streamlit.write('Thanks for adding ', fruit_add)
+  my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values ('"+fruit_add+"')")
+  streamlit.write('Thanks for adding ', fruit_add)
