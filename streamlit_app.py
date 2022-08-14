@@ -45,7 +45,7 @@ try:
 except URLError as e:
   streamlit.error()  
 
-try
+try:
 #DISPLAY ALL FRUITS
 
   streamlit.text("The Fruit load list contains:")
