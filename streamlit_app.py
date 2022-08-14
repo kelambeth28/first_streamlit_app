@@ -4,7 +4,7 @@ import requests
 import snowflake.connector
 from urllib.error import URLError
 
-streamlit.title ('🥣 My Parents now healthy diner');
+streamlit.title ('🥣 My Parents now healthy diner')
 streamlit.header('🥗 Breakfast Menu')
 streamlit.text('🐔 Omega 3 & Blueberry Oatmeal')
 streamlit.text('🥑 Kale, Spinach & Rocket Smoothie')
@@ -63,10 +63,11 @@ try:
 #ADDING FRUITS
 
 
-  
+def back_from_function as string;  
   def get_fruit_add_list(new_fruit):
-   with my_cnx.cursor() as my_cur:
-      my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values ('"+new_fruit+"')")
+
+   with my_cnx.cursor() as my_cur1:
+      my_cur1.execute("insert into pc_rivery_db.public.fruit_load_list values ('"+new_fruit+"')")
       return "Thanks for adding "+ new_fruit
     
   #Add a button to show the list
