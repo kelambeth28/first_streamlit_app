@@ -53,7 +53,7 @@ streamlit.header("Fruit Load list Contains:")
 streamlit.dataframe(my_data_row)
 
 def insert_new_fruit(new_fruit_choice):
-    with my_cnx.cursor() as my_cur1:
+    with my_cnx1.cursor() as my_cur1:
             my_cur1.execute ("insert into FRUIT_LOAD_LIST values (new_fruit_choice)")
             return "Thanks for Adding " + new_fruit_choice
 
