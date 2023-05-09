@@ -49,4 +49,4 @@ fruit_choice2 = streamlit.text_input('What fruit would you like to add?','Kiwi')
 streamlit.write('The user entered is', fruit_choice2)
 #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ fruit_choice2)
 
-mycur.execute ('insert into FRUIT_LOAD_LIST vaues ('from streamlit'))
+mycur.execute ("insert into FRUIT_LOAD_LIST vaues ('from streamlit')")
